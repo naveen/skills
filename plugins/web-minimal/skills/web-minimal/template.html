@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>site name</title>
+<style>
+  /* web-minimal: content is the design. Two weights, two grays, two states. */
+  :root {
+    --text: #1a1a1a;
+    --secondary: #888;
+    --divider: #e0e0e0;
+    --row-hover: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+    background: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  a { color: var(--text); text-decoration: none; }
+  a:hover { opacity: 0.6; }
+  .secondary { color: var(--secondary); }
+
+  /* header */
+  header { margin-bottom: 3rem; }
+  .site-title { font-size: 14px; }
+
+  /* sections */
+  section { margin-bottom: 3rem; }
+  .section-head { margin-bottom: 1.5rem; }   /* <p><strong>…</strong></p> */
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* bullet list: literal "* " prefix, not <ul> */
+  .bullets p { margin: 0; }
+
+  /* data rows: flex, not <table> */
+  .rows { display: flex; flex-direction: column; }
+  .row {
+    display: flex;
+    gap: 1rem;
+    padding: 3px 0;
+  }
+  .row:hover { background: var(--row-hover); }
+  .row .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .meta { color: var(--secondary); flex-shrink: 0; }
+  .group-label {
+    color: var(--secondary);
+    font-size: 12px;
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 4px;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  /* bracket controls */
+  .controls { color: var(--secondary); }
+  .controls .label { color: var(--secondary); }
+  .controls a { color: var(--secondary); }
+  .controls a.active { color: var(--text); }
+
+  /* underline-only input */
+  input[type="search"], input[type="text"] {
+    font: inherit;
+    color: var(--text);
+    border: none;
+    border-bottom: 1px solid var(--divider);
+    background: transparent;
+    padding: 6px 0;
+    width: 100%;
+  }
+  input:focus { outline: none; border-bottom-color: var(--text); }
+
+  /* stats */
+  .stats { color: var(--secondary); }
+
+  /* footer */
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--divider);
+    color: var(--secondary);
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 2rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-title">site name</div>
+  <div class="secondary">Author Name</div>
+</header>
+
+<section>
+  <p>This is the intro. First person, casual, direct. Say what the thing is — no "welcome to my."</p>
+  <p class="stats">300+ items · 40+ cities · 12+ countries</p>
+</section>
+
+<section>
+  <p class="section-head"><strong>Timeline</strong></p>
+  <div class="bullets">
+    <p>* 2025-, Latest thing in progress.</p>
+    <p>* 2009-2022, A finished chapter.</p>
+    <p>* 2009, Where it started.</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-head"><strong>Lists</strong></p>
+  <p class="controls">
+    <span class="label">View:</span>
+    <a href="#" class="active">[All]</a>
+    <a href="#">[A–Z]</a>
+    <a href="#">[By city]</a>
+  </p>
+  <div class="rows">
+    <div class="row"><span class="name">Some list name that truncates if too long</span><span class="meta">City</span><span class="meta">12</span><span class="meta">2019</span></div>
+    <div class="row"><span class="name">Another list</span><span class="meta">City</span><span class="meta">8</span><span class="meta">2021</span></div>
+  </div>
+</section>
+
+<footer>
+  <a href="https://example.com">home</a>
+</footer>
+
+<script>
+  // Data lives here as a plain array, clearly commented for easy editing.
+  // const items = [
+  //   { name: "...", city: "...", count: 12, year: 2019 },
+  // ];
+</script>
+
+</body>
+</html>

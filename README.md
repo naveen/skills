@@ -27,6 +27,7 @@ Then install whichever skills you want:
 ```
 /plugin install clipboard@skills
 /plugin install recap@skills
+/plugin install web-minimal@skills
 ```
 
 That's it — the skills load on their trigger phrases (below) or when you type the matching `/` command. To update later: `/plugin marketplace update skills`.
@@ -49,12 +50,21 @@ Reload the state of a project into a short, scannable brief — what landed, wha
 - **Scoped:** `/recap <topic>` narrows to one thread of work
 - **Read-only:** observes and reports; never commits, pushes, or changes branches
 
+### 🪧 web-minimal
+
+Build minimalist monospace web pages in the "content is the design" style — single-file HTML, no build tools, system monospace, two grays, zero decoration. Ships a ready-to-edit `template.html`.
+
+- **Trigger:** building a personal site, blog, landing page, archive, or link page; "make it simple/minimal/plain", "brutalist", "like a text file"
+- **Enforces:** no web fonts, no colors beyond two grays, no shadows/gradients/rounded corners, no animations, single `index.html`
+- **Includes:** a verify-before-finish checklist and a reference template
+
 ## Manual install (without plugins)
 
 ```bash
 git clone https://github.com/naveen/skills ~/.claude/naveen-skills
 ln -s ~/.claude/naveen-skills/plugins/clipboard/skills/clipboard ~/.claude/skills/clipboard
 ln -s ~/.claude/naveen-skills/plugins/recap/skills/recap ~/.claude/skills/recap
+ln -s ~/.claude/naveen-skills/plugins/web-minimal/skills/web-minimal ~/.claude/skills/web-minimal
 ```
 
 ## Repo layout
@@ -66,9 +76,14 @@ skills/
    ├─ clipboard/
    │  ├─ .claude-plugin/plugin.json
    │  └─ skills/clipboard/SKILL.md
-   └─ recap/
+   ├─ recap/
+   │  ├─ .claude-plugin/plugin.json
+   │  └─ skills/recap/SKILL.md
+   └─ web-minimal/
       ├─ .claude-plugin/plugin.json
-      └─ skills/recap/SKILL.md
+      └─ skills/web-minimal/
+         ├─ SKILL.md
+         └─ template.html
 ```
 
 ## License

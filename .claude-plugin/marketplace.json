@@ -20,6 +20,12 @@
       "source": "./plugins/recap",
       "description": "Summarize where a project stands — what landed, what's in flight, and what's next.",
       "version": "0.1.0"
+    },
+    {
+      "name": "web-minimal",
+      "source": "./plugins/web-minimal",
+      "description": "Build minimalist monospace web pages — single-file HTML, no build tools, two grays, no decoration.",
+      "version": "0.1.0"
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "web-minimal",
+  "description": "Build minimalist monospace web pages — single-file HTML, no build tools, two grays, no decoration. The 'content is the design' aesthetic.",
+  "version": "0.1.0",
+  "author": {
+    "name": "naveen",
+    "url": "https://github.com/naveen"
+  }
+}
