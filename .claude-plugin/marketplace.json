@@ -1,0 +1,25 @@
+{
+  "name": "skills",
+  "owner": {
+    "name": "naveen",
+    "url": "https://github.com/naveen"
+  },
+  "metadata": {
+    "description": "Naveen's Claude Code skills.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "clipboard",
+      "source": "./plugins/clipboard",
+      "description": "Copy content you just generated to the macOS clipboard via pbcopy, formatted for clean pasting.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "recap",
+      "source": "./plugins/recap",
+      "description": "Summarize where a project stands — what landed, what's in flight, and what's next.",
+      "version": "0.1.0"
+    }
+  ]
+}

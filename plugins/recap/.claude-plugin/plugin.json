@@ -1,0 +1,9 @@
+{
+  "name": "recap",
+  "description": "Summarize where a project stands — what landed, what's in flight, and what's next.",
+  "version": "0.1.0",
+  "author": {
+    "name": "naveen",
+    "url": "https://github.com/naveen"
+  }
+}

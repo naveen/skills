@@ -1,0 +1,9 @@
+{
+  "name": "clipboard",
+  "description": "Copy content you just generated to the macOS clipboard via pbcopy, formatted for clean pasting.",
+  "version": "0.1.0",
+  "author": {
+    "name": "naveen",
+    "url": "https://github.com/naveen"
+  }
+}
