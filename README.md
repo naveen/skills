@@ -1,10 +1,22 @@
 # skills
 
-A small marketplace of [Claude Code](https://docs.claude.com/en/docs/claude-code) skills I use day to day. Install any of them in two commands.
+[![skills.sh](https://skills.sh/b/naveen/skills)](https://skills.sh/naveen/skills)
+
+A small marketplace of [Claude Code](https://docs.claude.com/en/docs/claude-code) skills I use day to day. Install any of them in a couple commands.
 
 ## Install
 
-In Claude Code, add this marketplace once:
+### With the `skills` CLI (any agent)
+
+Works across Claude Code, Codex, Cursor, and 60+ other agents:
+
+```bash
+npx skills add naveen/skills
+```
+
+### As a Claude Code plugin
+
+Add this marketplace once:
 
 ```
 /plugin marketplace add naveen/skills
