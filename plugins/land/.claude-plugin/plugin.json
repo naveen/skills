@@ -1,0 +1,9 @@
+{
+  "name": "land",
+  "description": "Finish a workspace cleanly — verify tests, commit, open a PR against main, and note it in .context.",
+  "version": "0.1.0",
+  "author": {
+    "name": "naveen",
+    "url": "https://github.com/naveen"
+  }
+}
