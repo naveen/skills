@@ -26,6 +26,7 @@ Then install whichever skills you want:
 
 ```
 /plugin install clipboard@skills
+/plugin install land@skills
 /plugin install recap@skills
 /plugin install web-minimal@skills
 ```
@@ -41,6 +42,14 @@ Copy content you just generated straight to the macOS clipboard via `pbcopy`, fo
 - **Trigger:** `/clipboard`, "copy that", "pbcopy this", "put that on my clipboard"
 - **Modes:** plain-text (default, strips markdown), `commit` (dedented, ready for `git commit`), `raw` (markdown intact)
 - **Platform:** macOS only (`pbcopy`)
+
+### 🛬 land
+
+Finish a workspace cleanly — the bookend to `recap`. Verify tests pass, generate the commit and PR body from the diff, push, open a PR against `origin/main`, and drop a one-line summary into `.context/` so sibling agents (parallel Conductor worktrees) see it landed.
+
+- **Trigger:** `/land`, "land this", "wrap this up", "ship it", "open the PR"
+- **Gated:** stops on failing tests, an empty diff, or being on `main` — never lands red silently
+- **Safe for parallel worktrees:** no force-push, no history rewrite, never touches the shared git stash
 
 ### 📌 recap
 
@@ -63,6 +72,7 @@ Build minimalist monospace web pages in the "content is the design" style — si
 ```bash
 git clone https://github.com/naveen/skills ~/.claude/naveen-skills
 ln -s ~/.claude/naveen-skills/plugins/clipboard/skills/clipboard ~/.claude/skills/clipboard
+ln -s ~/.claude/naveen-skills/plugins/land/skills/land ~/.claude/skills/land
 ln -s ~/.claude/naveen-skills/plugins/recap/skills/recap ~/.claude/skills/recap
 ln -s ~/.claude/naveen-skills/plugins/web-minimal/skills/web-minimal ~/.claude/skills/web-minimal
 ```
@@ -76,6 +86,9 @@ skills/
    ├─ clipboard/
    │  ├─ .claude-plugin/plugin.json
    │  └─ skills/clipboard/SKILL.md
+   ├─ land/
+   │  ├─ .claude-plugin/plugin.json
+   │  └─ skills/land/SKILL.md
    ├─ recap/
    │  ├─ .claude-plugin/plugin.json
    │  └─ skills/recap/SKILL.md

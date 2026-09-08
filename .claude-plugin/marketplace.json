@@ -16,6 +16,12 @@
       "version": "0.1.0"
     },
     {
+      "name": "land",
+      "source": "./plugins/land",
+      "description": "Finish a workspace cleanly — verify tests, commit, open a PR against main, and note it in .context.",
+      "version": "0.1.0"
+    },
+    {
       "name": "recap",
       "source": "./plugins/recap",
       "description": "Summarize where a project stands — what landed, what's in flight, and what's next.",
