@@ -30,11 +30,7 @@ Run these in order. Each gate protects the next — don't push a failing build, 
 
 - Stage the intended changes. Review what's staged — don't blindly `git add -A` over stray files, build artifacts, or `.env`. Flag anything surprising before committing.
 - Write a real commit message from the *diff*, not from memory: a concise imperative subject line, a blank line, then a short body covering what changed and why when it isn't obvious. Match the repo's existing commit style (skim `git log`).
-- End the message with the required trailer:
-
-  ```
-  Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
-  ```
+- End the message with the `Co-Authored-By` trailer the harness provides in the session's attribution system-reminder. If no attribution reminder is present, use the model name the session reports for itself, in the form `Co-Authored-By: Claude <model name> <noreply@anthropic.com>`. Never copy a model name from this file or from memory — a hardcoded name goes stale and misattributes the work.
 - If there are already commits on the branch, prefer one clean additional commit over rewriting history. Don't squash or force-push unless the user asks.
 
 ### 4. Push
